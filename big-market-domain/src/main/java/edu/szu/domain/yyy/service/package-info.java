@@ -1,0 +1,1 @@
+package edu.szu.domain.yyy.service;
