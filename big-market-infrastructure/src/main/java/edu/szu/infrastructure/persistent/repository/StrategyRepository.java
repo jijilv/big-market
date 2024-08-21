@@ -3,6 +3,7 @@ package edu.szu.infrastructure.persistent.repository;
 import edu.szu.domain.strategy.model.entity.StrategyAwardEntity;
 import edu.szu.domain.strategy.model.entity.StrategyEntity;
 import edu.szu.domain.strategy.model.entity.StrategyRuleEntity;
+import edu.szu.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import edu.szu.domain.strategy.repository.IStrategyRepository;
 import edu.szu.infrastructure.persistent.dao.IStrategyAwardDao;
 import edu.szu.infrastructure.persistent.dao.IStrategyDao;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -90,6 +92,7 @@ public class StrategyRepository implements IStrategyRepository {
         StrategyEntity strategyEntity = redisService.getValue(cacheKey);
         if (null != strategyEntity) return strategyEntity;
         Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        if (null == strategy) return StrategyEntity.builder().build();
         strategyEntity = StrategyEntity.builder()
                 .strategyId(strategy.getStrategyId())
                 .strategyDesc(strategy.getStrategyDesc())
@@ -113,6 +116,29 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleValue(strategyRuleRes.getRuleValue())
                 .ruleDesc(strategyRuleRes.getRuleDesc())
                 .build();
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, String ruleModel) {
+        return queryStrategyRuleValue(strategyId, null, ruleModel);
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel) {
+        StrategyRule strategyRule = new StrategyRule();
+        strategyRule.setStrategyId(strategyId);
+        strategyRule.setAwardId(awardId);
+        strategyRule.setRuleModel(ruleModel);
+        return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 
 }

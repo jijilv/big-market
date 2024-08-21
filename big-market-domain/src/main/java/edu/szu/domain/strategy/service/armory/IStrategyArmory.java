@@ -1,4 +1,4 @@
-package edu.szu.domain.strategy.service;
+package edu.szu.domain.strategy.service.armory;
 
 public interface IStrategyArmory {
 
