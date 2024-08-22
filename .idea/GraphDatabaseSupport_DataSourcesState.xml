@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GraphDatabaseSupport.DataSourcesState">
+    <option name="containerV1">
+      <DataSourceContainerV1>
+        <option name="dataSources">
+          <list>
+            <DataSourceV1>
+              <option name="uuid" value="4fa1e446-38ee-481c-826a-89df1a26038d" />
+              <option name="name" value="big_market" />
+              <option name="dataSourceType" value="NEO4J_BOLT" />
+              <option name="configuration">
+                <map>
+                  <entry key="authType" value="User &amp; Password" />
+                  <entry key="database" value="big_market" />
+                  <entry key="host" value="localhost" />
+                  <entry key="password" value="123456" />
+                  <entry key="port" value="13306" />
+                  <entry key="protocol" value="bolt" />
+                  <entry key="user" value="root" />
+                </map>
+              </option>
+            </DataSourceV1>
+          </list>
+        </option>
+      </DataSourceContainerV1>
+    </option>
+  </component>
+</project>
