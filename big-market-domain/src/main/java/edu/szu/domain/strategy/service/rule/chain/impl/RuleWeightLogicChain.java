@@ -10,6 +10,8 @@ import edu.szu.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 
 import edu.szu.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -22,6 +24,7 @@ import java.util.*;
  */
 @Slf4j
 @Component("rule_weight")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class RuleWeightLogicChain extends AbstractLogicChain {
 
     @Resource
@@ -114,4 +117,5 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     }
 
 }
+
 

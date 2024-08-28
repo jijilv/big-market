@@ -2,7 +2,7 @@ package edu.szu.domain.strategy.service.rule.chain;
 
 import edu.szu.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 
-public interface ILogicChain extends ILogicChainArmory{
+public interface ILogicChain extends ILogicChainArmory, Cloneable {
 
     /**
      * 责任链接口

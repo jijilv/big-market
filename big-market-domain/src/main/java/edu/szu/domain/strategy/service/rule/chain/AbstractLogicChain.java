@@ -3,7 +3,7 @@ package edu.szu.domain.strategy.service.rule.chain;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public abstract class AbstractLogicChain implements ILogicChain {
+public abstract class AbstractLogicChain implements ILogicChain{
 
     private ILogicChain next;
 
@@ -21,4 +21,5 @@ public abstract class AbstractLogicChain implements ILogicChain {
     protected abstract String ruleModel();
 
 }
+
 
