@@ -1,4 +1,4 @@
-package edu.szu.test.domain;
+package edu.szu.test.domain.strategy;
 
 import edu.szu.domain.strategy.service.armory.IStrategyArmory;
 import edu.szu.domain.strategy.service.armory.IStrategyDispatch;

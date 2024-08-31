@@ -1,5 +1,6 @@
 package edu.szu.infrastructure.persistent.dao;
 
+import edu.szu.infrastructure.persistent.po.RaffleActivityAccount;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -9,4 +10,10 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface IRaffleActivityAccountDao {
+
+    void insert(RaffleActivityAccount raffleActivityAccount);
+
+    int updateAccountQuota(RaffleActivityAccount raffleActivityAccount);
+
 }
+

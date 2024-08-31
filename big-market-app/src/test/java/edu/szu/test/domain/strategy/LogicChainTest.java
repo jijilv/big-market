@@ -1,4 +1,4 @@
-package edu.szu.test.domain;
+package edu.szu.test.domain.strategy;
 
 import com.alibaba.fastjson.JSON;
 import edu.szu.domain.strategy.service.armory.IStrategyArmory;
