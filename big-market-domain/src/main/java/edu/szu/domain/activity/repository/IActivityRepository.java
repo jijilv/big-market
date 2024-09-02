@@ -6,6 +6,7 @@ import edu.szu.domain.activity.model.entity.*;
 import edu.szu.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 public interface IActivityRepository {
 
@@ -41,7 +42,7 @@ public interface IActivityRepository {
 
     void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
 
-
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 
 }
 

@@ -1,10 +1,12 @@
 package edu.szu.trigger.api;
 
+
 import edu.szu.trigger.api.dto.RaffleAwardListRequestDTO;
 import edu.szu.trigger.api.dto.RaffleAwardListResponseDTO;
-import edu.szu.trigger.api.dto.RaffleRequestDTO;
-import edu.szu.trigger.api.dto.RaffleResponseDTO;
+import edu.szu.trigger.api.dto.RaffleStrategyRequestDTO;
+import edu.szu.trigger.api.dto.RaffleStrategyResponseDTO;
 import edu.szu.types.model.Response;
+
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ import java.util.List;
  * @description 抽奖服务接口
  * @create 2024-02-14 09:33
  */
-public interface IRaffleService {
+public interface IRaffleStrategyService {
 
     /**
      * 策略装配接口
@@ -36,6 +38,7 @@ public interface IRaffleService {
      * @param requestDTO 请求参数
      * @return 抽奖结果
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 
 }
+

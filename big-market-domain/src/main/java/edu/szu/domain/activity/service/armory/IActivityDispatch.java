@@ -14,3 +14,4 @@ public interface IActivityDispatch {
     boolean subtractionActivitySkuStock(Long sku, Date endDateTime);
 
 }
+
