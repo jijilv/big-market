@@ -13,7 +13,8 @@ public class ApiTest {
     @Test
     public void test() {
         RaffleAwardListRequestDTO requestDTO = new RaffleAwardListRequestDTO();
-        requestDTO.setStrategyId(1000001L);
+        requestDTO.setUserId("xiaofuge");
+        requestDTO.setActivityId(100301L);
         log.info(JSON.toJSONString(requestDTO));
     }
 
@@ -28,6 +29,7 @@ public class ApiTest {
     }
 
 }
+
 
 
 
