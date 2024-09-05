@@ -55,6 +55,5 @@ public class BlackListLogicChain extends AbstractLogicChain {
         return DefaultChainFactory.LogicModel.RULE_BLACKLIST.getCode();
     }
 
-
-
 }
+
