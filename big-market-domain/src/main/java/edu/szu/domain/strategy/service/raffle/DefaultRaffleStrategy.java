@@ -4,10 +4,7 @@ import edu.szu.domain.strategy.model.entity.RaffleFactorEntity;
 import edu.szu.domain.strategy.model.entity.RuleActionEntity;
 import edu.szu.domain.strategy.model.entity.RuleMatterEntity;
 import edu.szu.domain.strategy.model.entity.StrategyAwardEntity;
-import edu.szu.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
-import edu.szu.domain.strategy.model.valobj.RuleTreeVO;
-import edu.szu.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
-import edu.szu.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
+import edu.szu.domain.strategy.model.valobj.*;
 import edu.szu.domain.strategy.repository.IStrategyRepository;
 import edu.szu.domain.strategy.service.AbstractRaffleStrategy;
 import edu.szu.domain.strategy.service.IRaffleAward;
@@ -90,6 +87,16 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
         return repository.queryAwardRuleLockCount(treeIds);
     }
 
-}
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+        return repository.queryAwardRuleWeight(strategyId);
+    }
 
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeightByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return queryAwardRuleWeight(strategyId);
+    }
+
+}
 

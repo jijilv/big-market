@@ -143,11 +143,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.5</version>
                 <configuration>
-                    <mainClass>edu.szu.Application</mainClass>
+                    <mainClass>cn.bugstack.Application</mainClass>
                     <layout>JAR</layout>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
