@@ -1,9 +1,15 @@
 package edu.szu.domain.activity.model.entity;
 
 import edu.szu.domain.activity.model.valobj.OrderTradeTypeVO;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class SkuRechargeEntity {
 
     /** 用户ID */
@@ -16,5 +22,6 @@ public class SkuRechargeEntity {
     private OrderTradeTypeVO orderTradeType = OrderTradeTypeVO.rebate_no_pay_trade;
 
 }
+
 
 

@@ -1,5 +1,6 @@
 package edu.szu.domain.credit.service;
 
+import edu.szu.domain.credit.model.model.CreditAccountEntity;
 import edu.szu.domain.credit.model.model.TradeEntity;
 
 public interface ICreditAdjustService {
@@ -11,5 +12,13 @@ public interface ICreditAdjustService {
      */
     String createOrder(TradeEntity tradeEntity);
 
+    /**
+     * 查询用户积分账户
+     * @param userId 用户ID
+     * @return 积分账户实体
+     */
+    CreditAccountEntity queryUserCreditAccount(String userId);
+
 }
+
 
