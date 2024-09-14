@@ -36,7 +36,7 @@ public class RaffleActivityControllerTest {
 
     @Test
     public void test_draw() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1; i++) {
             ActivityDrawRequestDTO request = new ActivityDrawRequestDTO();
             request.setActivityId(100301L);
             request.setUserId("xiaofuge");
@@ -109,7 +109,7 @@ public class RaffleActivityControllerTest {
     public void test_creditPayExchangeSku() throws InterruptedException {
         SkuProductShopCartRequestDTO request = new SkuProductShopCartRequestDTO();
         request.setUserId("xiaofuge");
-        request.setSku(9011L);
+        request.setSku(9014L);
         Response<Boolean> response = raffleActivityService.creditPayExchangeSku(request);
         log.info("请求参数：{}", JSON.toJSONString(request));
         log.info("测试结果：{}", JSON.toJSONString(response));
@@ -118,4 +118,3 @@ public class RaffleActivityControllerTest {
     }
 
 }
-

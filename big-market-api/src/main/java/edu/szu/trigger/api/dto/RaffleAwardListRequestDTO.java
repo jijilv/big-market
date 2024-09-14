@@ -2,9 +2,11 @@ package edu.szu.trigger.api.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 @Data
-public class RaffleAwardListRequestDTO {
+public class RaffleAwardListRequestDTO implements Serializable {
 
     // 用户ID
     private String userId;

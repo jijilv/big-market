@@ -2,8 +2,10 @@ package edu.szu.trigger.api.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class SkuProductShopCartRequestDTO {
+public class SkuProductShopCartRequestDTO implements Serializable {
 
     /**
      * 用户ID

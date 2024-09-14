@@ -5,6 +5,7 @@ import edu.szu.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import edu.szu.domain.activity.model.entity.*;
 import edu.szu.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -58,4 +59,7 @@ public interface IActivityRepository {
 
     List<SkuProductEntity> querySkuProductEntityListByActivityId(Long activityId);
 
+    BigDecimal queryUserCreditAccountAmount(String userId);
+
 }
+

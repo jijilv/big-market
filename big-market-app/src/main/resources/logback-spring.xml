@@ -97,11 +97,11 @@
         <appender-ref ref="ERROR_FILE"/>
     </appender>
 
-    <!--    <appender name="CUSTOM" class="cn.bugstack.monitor.sdk.appender.CustomAppender">-->
+    <!--    <appender name="Monitor" class="plus.gaga.monitor.sdk.appender.CustomAppender">-->
     <!--        <systemName>big-market</systemName>-->
     <!--        <groupId>cn.bugstack</groupId>-->
-    <!--        <host>127.0.0.1</host>-->
-    <!--        <port>16379</port>-->
+    <!--        <host>redis</host>-->
+    <!--        <port>6379</port>-->
     <!--    </appender>-->
 
     <!-- 开发环境：控制台打印 -->
@@ -110,8 +110,8 @@
     </springProfile>
 
     <root level="info">
-        <!--        <appender-ref ref="CUSTOM"/>-->
-
+        <!-- 监控 -->
+        <!--        <appender-ref ref="Monitor"/>-->
         <appender-ref ref="CONSOLE"/>
         <!-- 异步日志-INFO -->
         <appender-ref ref="ASYNC_FILE_INFO"/>
