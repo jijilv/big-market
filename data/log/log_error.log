@@ -1565,3 +1565,311 @@ Caused by: java.net.ConnectException: Connection refused: connect
 24-09-14.08:09:01.242 [Dubbo-framework-registry-notification-0-thread-1] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.179.173:20880/edu.szu.trigger.api.IRaffleActivityService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.179.173&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=edu.szu.trigger.api.IRaffleActivityService&methods=queryUserActivityAccount,creditPayExchangeSku,querySkuProductListByActivityId,queryUserCreditAccount,armory,calendarSignRebate,draw,isCalendarSignRebate&pid=27988&qos.enable=false&release=3.0.9&revision=1.0&service-name-mapping=true&side=provider&timestamp=1726272540207&version=1.0, dubbo version: 3.0.9, current host: 172.26.179.173
 24-09-14.08:09:01.357 [main            ] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.179.173:20880/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.179.173&bind.port=20880&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=big-market&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getAndListenInstanceMetadata,getExportedURLs,serviceName,version,getSubscribedURLs,getExportedServiceURLs,exportInstanceMetadata,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=27988&qos.enable=false&register=false&release=3.0.9&revision=3.0.9&service-name-mapping=true&side=provider&threadpool=cached&threads=100&timestamp=1726272541129&version=1.0.0, dubbo version: 3.0.9, current host: 172.26.179.173
 24-09-14.08:09:01.629 [Dubbo-framework-registry-notification-2-thread-1] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.179.173:20880/edu.szu.trigger.api.IRaffleStrategyService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.179.173&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=edu.szu.trigger.api.IRaffleStrategyService&methods=randomRaffle,strategyArmory,queryRaffleAwardList,queryRaffleStrategyRuleWeight&pid=27988&qos.enable=false&release=3.0.9&revision=1.0&service-name-mapping=true&side=provider&timestamp=1726272540873&version=1.0, dubbo version: 3.0.9, current host: 172.26.179.173
+24-09-15.09:39:22.406 [main            ] WARN  ConfigurationUtils     -  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:39:22.406 [main            ] WARN  ConfigurationUtils     -  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:39:29.329 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 12 common frames omitted
+24-09-15.09:39:35.492 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 12 common frames omitted
+24-09-15.09:39:36.490 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:39:39.570 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:39:42.618 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:39:45.722 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:39:47.788 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 12 common frames omitted
+24-09-15.09:39:48.761 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:39:51.901 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:39:54.897 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:39:58.060 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-3] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:39:59.051 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-1] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:01.069 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:02.186 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:08.339 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:09.381 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-3] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:10.392 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-1] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1942)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1915)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1384)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1230)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 12 common frames omitted
+24-09-15.09:40:11.403 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:12.448 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-4] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:18.588 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-3] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:19.614 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:21.660 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-4] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:23.250 [main            ] WARN  ServiceConfig          -  [DUBBO] Use random available port(20880) for protocol dubbo, dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:40:24.721 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-5] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:25.771 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-3] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:26.767 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-5] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:27.826 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-1] WARN  SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+24-09-15.09:40:30.537 [Thread-10       ] WARN  HttpClientBeanHolder   - [HttpClientBeanHolder] Start destroying common HttpClient
+24-09-15.09:40:30.537 [Thread-15       ] WARN  NotifyCenter           - [NotifyCenter] Start destroying Publisher
+24-09-15.09:40:30.537 [Thread-10       ] WARN  HttpClientBeanHolder   - [HttpClientBeanHolder] Destruction of the end
+24-09-15.09:40:30.537 [Thread-15       ] WARN  NotifyCenter           - [NotifyCenter] Destruction of the end
+24-09-15.09:40:30.884 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-4] ERROR SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+24-09-15.09:40:31.494 [main            ] ERROR DefaultModuleDeployer  -  [DUBBO] Dubbo Module[1.1.1] start failed: java.lang.IllegalStateException: DubboProtocol is destroyed, dubbo version: 3.0.9, current host: 172.26.180.187
+java.lang.IllegalStateException: DubboProtocol is destroyed
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.checkDestroyed(DubboProtocol.java:359)
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:306)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:76)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:66)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:61)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.lambda$doLocalExport$2(RegistryProtocol.java:294)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:292)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:239)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:74)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:641)
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:619)
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:578)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:410)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:396)
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:361)
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:233)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:341)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:313)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at edu.szu.Application.main(Application.java:17)
+24-09-15.09:40:31.495 [main            ] ERROR DefaultApplicationDeployer -  [DUBBO] Dubbo Application[1.1](big-market) found failed module: Dubbo Module[1.1.1], dubbo version: 3.0.9, current host: 172.26.180.187
+java.lang.IllegalStateException: DubboProtocol is destroyed
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.checkDestroyed(DubboProtocol.java:359)
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:306)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:76)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:66)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:61)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.lambda$doLocalExport$2(RegistryProtocol.java:294)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:292)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:239)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:74)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:641)
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:619)
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:578)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:410)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:396)
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:361)
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:233)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:341)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:313)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at edu.szu.Application.main(Application.java:17)
+24-09-15.09:40:31.799 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.IllegalStateException: DubboProtocol is destroyed
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.checkDestroyed(DubboProtocol.java:359)
+	at org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:306)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:76)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:66)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:61)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.lambda$doLocalExport$2(RegistryProtocol.java:294)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:292)
+	at org.apache.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:239)
+	at org.apache.dubbo.qos.protocol.QosProtocolWrapper.export(QosProtocolWrapper.java:74)
+	at org.apache.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:64)
+	at org.apache.dubbo.rpc.cluster.filter.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:58)
+	at org.apache.dubbo.rpc.protocol.ProtocolSerializationWrapper.export(ProtocolSerializationWrapper.java:47)
+	at org.apache.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrl(ServiceConfig.java:641)
+	at org.apache.dubbo.config.ServiceConfig.exportRemote(ServiceConfig.java:619)
+	at org.apache.dubbo.config.ServiceConfig.exportUrl(ServiceConfig.java:578)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:410)
+	at org.apache.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:396)
+	at org.apache.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:361)
+	at org.apache.dubbo.config.ServiceConfig.export(ServiceConfig.java:233)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServiceInternal(DefaultModuleDeployer.java:341)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.exportServices(DefaultModuleDeployer.java:313)
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.start(DefaultModuleDeployer.java:145)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextRefreshedEvent(DubboDeployApplicationListener.java:111)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:100)
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at edu.szu.Application.main(Application.java:17)
+24-09-15.09:43:05.202 [main            ] WARN  ConfigurationUtils     -  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:43:05.202 [main            ] WARN  ConfigurationUtils     -  [DUBBO] Config center was specified, but no config item found., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:43:08.136 [main            ] WARN  ServiceConfig          -  [DUBBO] Use random available port(20880) for protocol dubbo, dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:43:08.757 [main            ] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.180.187:20880/edu.szu.trigger.api.IRaffleActivityService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.180.187&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=edu.szu.trigger.api.IRaffleActivityService&methods=queryUserActivityAccount,querySkuProductListByActivityId,creditPayExchangeSku,queryUserCreditAccount,armory,calendarSignRebate,draw,isCalendarSignRebate&pid=11948&qos.enable=false&release=3.0.9&revision=1.0&service-name-mapping=true&side=provider&timestamp=1726364588132&version=1.0, dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:43:09.181 [main            ] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.180.187:20880/edu.szu.trigger.api.IRaffleStrategyService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.180.187&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=edu.szu.trigger.api.IRaffleStrategyService&methods=randomRaffle,queryRaffleAwardList,strategyArmory,queryRaffleStrategyRuleWeight&pid=11948&qos.enable=false&release=3.0.9&revision=1.0&service-name-mapping=true&side=provider&timestamp=1726364588939&version=1.0, dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:43:09.449 [main            ] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.180.187:20880/org.apache.dubbo.metadata.MetadataService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.180.187&bind.port=20880&category=configurators&check=false&connections=1&corethreads=2&delay=0&deprecated=false&dubbo=2.0.2&dynamic=true&executes=100&generic=false&getAndListenInstanceMetadata.1.callback=true&getAndListenInstanceMetadata.return=true&getAndListenInstanceMetadata.sent=true&group=big-market&interface=org.apache.dubbo.metadata.MetadataService&methods=getMetadataURL,isMetadataService,getExportedURLs,getAndListenInstanceMetadata,serviceName,getSubscribedURLs,version,exportInstanceMetadata,getExportedServiceURLs,getMetadataInfo,toSortedStrings,getMetadataInfos,getServiceDefinition,getInstanceMetadataChangedListenerMap&pid=11948&qos.enable=false&register=false&release=3.0.9&revision=3.0.9&service-name-mapping=true&side=provider&threadpool=cached&threads=100&timestamp=1726364589211&version=1.0.0, dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:44:38.164 [Thread-11       ] WARN  HttpClientBeanHolder   - [HttpClientBeanHolder] Start destroying common HttpClient
+24-09-15.09:44:38.165 [Thread-16       ] WARN  NotifyCenter           - [NotifyCenter] Start destroying Publisher
+24-09-15.09:44:38.165 [Thread-16       ] WARN  NotifyCenter           - [NotifyCenter] Destruction of the end
+24-09-15.09:44:38.166 [Thread-11       ] WARN  HttpClientBeanHolder   - [HttpClientBeanHolder] Destruction of the end
+24-09-15.09:44:38.167 [SpringApplicationShutdownHook] WARN  RegistryManager        -  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:44:38.168 [SpringApplicationShutdownHook] WARN  RegistryManager        -  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:44:38.168 [SpringApplicationShutdownHook] WARN  RegistryManager        -  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:44:38.169 [SpringApplicationShutdownHook] WARN  RegistryManager        -  [DUBBO] All registry instances have been destroyed, failed to fetch any instance. Usually, this means no need to try to do unnecessary redundant resource clearance, all registries has been taken care of., dubbo version: 3.0.9, current host: 172.26.180.187
+24-09-15.09:44:38.765 [Dubbo-framework-registry-notification-2-thread-1] WARN  NacosRegistry          -  [DUBBO] Ignore empty notify urls for subscribe url provider://172.26.180.187:20880/edu.szu.trigger.api.IRaffleStrategyService?anyhost=true&application=big-market&application.version=1.0&background=false&bind.ip=172.26.180.187&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=edu.szu.trigger.api.IRaffleStrategyService&methods=randomRaffle,queryRaffleAwardList,strategyArmory,queryRaffleStrategyRuleWeight&pid=11948&qos.enable=false&release=3.0.9&revision=1.0&service-name-mapping=true&side=provider&timestamp=1726364588939&version=1.0, dubbo version: 3.0.9, current host: 172.26.180.187
