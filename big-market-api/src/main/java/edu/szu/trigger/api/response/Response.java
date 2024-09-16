@@ -1,4 +1,4 @@
-package edu.szu.types.model;
+package edu.szu.trigger.api.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,3 +18,4 @@ public class Response<T> implements Serializable {
     private T data;
 
 }
+

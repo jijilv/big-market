@@ -94,9 +94,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+        <!-- Dubbo + Nacos -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
         </dependency>
 
         <dependency>
@@ -104,6 +117,7 @@
             <artifactId>business-behavior-monitor-sdk</artifactId>
             <version>1.1</version>
         </dependency>
+
 
         <!--        <dependency>-->
         <!--            <groupId>cn.bugstack</groupId>-->
@@ -119,6 +133,11 @@
         <dependency>
             <groupId>edu.szu</groupId>
             <artifactId>big-market-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>3.1.4</version>
         </dependency>
     </dependencies>
 

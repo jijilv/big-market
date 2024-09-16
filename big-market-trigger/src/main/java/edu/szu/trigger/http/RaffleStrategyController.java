@@ -14,7 +14,8 @@ import edu.szu.trigger.api.IRaffleStrategyService;
 import edu.szu.trigger.api.dto.*;
 import edu.szu.types.enums.ResponseCode;
 import edu.szu.types.exception.AppException;
-import edu.szu.types.model.Response;
+import edu.szu.trigger.api.response.Response;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.DubboService;

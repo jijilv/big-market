@@ -1,7 +1,8 @@
 package edu.szu.trigger.api;
 
 import edu.szu.trigger.api.dto.*;
-import edu.szu.types.model.Response;
+import edu.szu.trigger.api.response.Response;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -73,4 +74,3 @@ public interface IRaffleActivityService {
     Response<Boolean> creditPayExchangeSku(SkuProductShopCartRequestDTO request);
 
 }
-

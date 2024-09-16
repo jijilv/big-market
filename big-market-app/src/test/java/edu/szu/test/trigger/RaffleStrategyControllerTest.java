@@ -6,7 +6,8 @@ import edu.szu.trigger.api.dto.RaffleAwardListRequestDTO;
 import edu.szu.trigger.api.dto.RaffleAwardListResponseDTO;
 import edu.szu.trigger.api.dto.RaffleStrategyRuleWeightRequestDTO;
 import edu.szu.trigger.api.dto.RaffleStrategyRuleWeightResponseDTO;
-import edu.szu.types.model.Response;
+
+import edu.szu.trigger.api.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
