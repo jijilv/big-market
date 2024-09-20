@@ -1,8 +1,8 @@
 package edu.szu.test.infrastructure;
 
 import com.alibaba.fastjson.JSON;
-import edu.szu.infrastructure.persistent.dao.IRuleTreeNodeDao;
-import edu.szu.infrastructure.persistent.po.RuleTreeNode;
+import edu.szu.infrastructure.dao.IRuleTreeNodeDao;
+import edu.szu.infrastructure.dao.po.RuleTreeNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,4 +32,5 @@ public class RuleTreeNodeDaoTest {
     }
 
 }
+
 

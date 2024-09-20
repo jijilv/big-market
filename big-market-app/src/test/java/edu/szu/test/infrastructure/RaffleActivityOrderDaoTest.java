@@ -1,8 +1,8 @@
 package edu.szu.test.infrastructure;
 
 import com.alibaba.fastjson.JSON;
-import edu.szu.infrastructure.persistent.dao.IRaffleActivityOrderDao;
-import edu.szu.infrastructure.persistent.po.RaffleActivityOrder;
+import edu.szu.infrastructure.dao.IRaffleActivityOrderDao;
+import edu.szu.infrastructure.dao.po.RaffleActivityOrder;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.RandomStringUtils;
 import org.jeasy.random.EasyRandom;
@@ -69,4 +69,3 @@ public class RaffleActivityOrderDaoTest {
     }
 
 }
-

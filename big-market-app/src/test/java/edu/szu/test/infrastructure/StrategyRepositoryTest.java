@@ -4,7 +4,7 @@ import com.alibaba.fastjson2.JSON;
 import edu.szu.domain.strategy.model.valobj.RuleTreeVO;
 import edu.szu.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import edu.szu.domain.strategy.repository.IStrategyRepository;
-import edu.szu.infrastructure.persistent.redis.IRedisService;
+import edu.szu.infrastructure.redis.IRedisService;
 import edu.szu.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -72,5 +72,3 @@ public class StrategyRepositoryTest {
     }
 
 }
-
-

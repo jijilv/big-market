@@ -1,7 +1,7 @@
 package edu.szu.test.infrastructure;
 
-import edu.szu.infrastructure.persistent.dao.IRaffleActivityAccountDayDao;
-import edu.szu.infrastructure.persistent.po.RaffleActivityAccountDay;
+import edu.szu.infrastructure.dao.IRaffleActivityAccountDayDao;
+import edu.szu.infrastructure.dao.po.RaffleActivityAccountDay;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,4 +29,3 @@ public class RaffleActivityAccountDayDaoTest {
     }
 
 }
-

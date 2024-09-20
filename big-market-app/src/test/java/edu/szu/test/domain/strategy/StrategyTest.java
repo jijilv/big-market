@@ -2,7 +2,7 @@ package edu.szu.test.domain.strategy;
 
 import edu.szu.domain.strategy.service.armory.IStrategyArmory;
 import edu.szu.domain.strategy.service.armory.IStrategyDispatch;
-import edu.szu.infrastructure.persistent.redis.IRedisService;
+import edu.szu.infrastructure.redis.IRedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;

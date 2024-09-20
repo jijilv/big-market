@@ -1,8 +1,8 @@
 package edu.szu.test.infrastructure;
 
 import com.alibaba.fastjson2.JSON;
-import edu.szu.infrastructure.persistent.dao.IRaffleActivityDao;
-import edu.szu.infrastructure.persistent.po.RaffleActivity;
+import edu.szu.infrastructure.dao.IRaffleActivityDao;
+import edu.szu.infrastructure.dao.po.RaffleActivity;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,3 +31,4 @@ public class RaffleActivityDaoTest {
     }
 
 }
+
