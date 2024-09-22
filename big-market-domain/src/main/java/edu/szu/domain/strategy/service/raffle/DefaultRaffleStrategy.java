@@ -38,8 +38,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
 
     @Override
     public DefaultChainFactory.StrategyAwardVO raffleLogicChain(String userId, Long strategyId) {
-        ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyId);
         log.info("抽奖策略-责任链 userId:{} strategyId:{}", userId, strategyId);
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(strategyId);
         return logicChain.logic(userId, strategyId);
     }
 
@@ -69,6 +69,11 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     }
 
     @Override
+    public StrategyAwardStockKeyVO takeQueueValue(Long strategyId, Integer awardId) throws InterruptedException {
+        return repository.takeQueueValue(strategyId, awardId);
+    }
+
+    @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
         repository.updateStrategyAwardStock(strategyId, awardId);
     }
@@ -82,6 +87,11 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     public List<StrategyAwardEntity> queryRaffleStrategyAwardListByActivityId(Long activityId) {
         Long strategyId = repository.queryStrategyIdByActivityId(activityId);
         return queryRaffleStrategyAwardList(strategyId);
+    }
+
+    @Override
+    public List<StrategyAwardStockKeyVO> queryOpenActivityStrategyAwardList() {
+        return repository.queryOpenActivityStrategyAwardList();
     }
 
     @Override

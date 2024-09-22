@@ -20,7 +20,7 @@
     <select id="queryStrategyAwardList" resultMap="dataMap">
         select strategy_id
         from strategy_award
-        limit 10
+                 limit 10
     </select>
 
     <select id="queryStrategyAwardListByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
@@ -29,7 +29,6 @@
         where strategy_id = #{strategyId}
         order by sort asc
     </select>
-
 
     <select id="queryStrategyAwardRuleModels" parameterType="edu.szu.infrastructure.dao.po.StrategyAward" resultType="java.lang.String">
         select rule_models from strategy_award
@@ -47,6 +46,12 @@
         from strategy_award
         where strategy_id = #{strategyId} and award_id = #{awardId}
     </select>
+
+    <select id="queryOpenActivityStrategyAwardList" resultMap="dataMap">
+        select strategy_id, award_id from strategy_award
+        where strategy_id in (select strategy_id from raffle_activity where state = 'open')
+    </select>
+
 
 
 

@@ -21,6 +21,8 @@ public interface IRaffleActivitySkuDao {
 
     List<RaffleActivitySku> queryActivitySkuListByActivityId(Long activityId);
 
+    List<Long> querySkuList();
+
 }
 
 
