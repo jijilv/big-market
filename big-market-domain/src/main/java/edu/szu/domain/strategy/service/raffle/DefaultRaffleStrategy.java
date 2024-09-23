@@ -111,4 +111,3 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     }
 
 }
-
