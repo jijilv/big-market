@@ -5,7 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
+
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -16,7 +18,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserRaffleOrder {
+public class UserRaffleOrder implements Serializable {
 
     /** 用户ID */
     private String id;

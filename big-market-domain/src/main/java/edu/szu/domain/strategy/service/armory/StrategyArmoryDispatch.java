@@ -32,7 +32,7 @@ public class StrategyArmoryDispatch extends AbstractStrategyAlgorithm {
     // 抽奖策略算法
     private final Map<String, IAlgorithm> algorithmMap;
     // 抽奖算法阈值，在多少范围内开始选择不同选择
-    private final Integer ALGORITHM_THRESHOLD_VALUE = 10000;
+    private final Integer ALGORITHM_THRESHOLD_VALUE = 1000;
 
     public StrategyArmoryDispatch(Map<String, IAlgorithm> algorithmMap) {
         this.algorithmMap = algorithmMap;

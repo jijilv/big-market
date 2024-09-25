@@ -35,6 +35,12 @@
             <groupId>edu.szu</groupId>
             <artifactId>big-market-domain</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>edu.szu</groupId>
+            <artifactId>big-market-querys</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

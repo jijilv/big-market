@@ -1,6 +1,7 @@
 package edu.szu.infrastructure.elasticsearch;
 
-import edu.szu.infrastructure.dao.po.UserRaffleOrder;
+
+import edu.szu.infrastructure.elasticsearch.po.UserRaffleOrder;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
