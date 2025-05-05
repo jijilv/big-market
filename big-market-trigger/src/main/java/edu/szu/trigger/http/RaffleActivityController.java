@@ -45,11 +45,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 抽奖活动服务 注意；在不引用 application/case 层的时候，就需要让接口实现层来做领域的串联。一些较大规模的系统，需要加入 case 层。
- * @create 2024-04-13 09:42
- */
+
 @Slf4j
 @RestController()
 @CrossOrigin("${app.config.cross-origin}")
@@ -127,13 +123,13 @@ public class RaffleActivityController implements IRaffleActivityService {
      * @return 抽奖结果
      * <p>
      * 接口：<a href="http://localhost:8091/api/v1/raffle/activity/draw">/api/v1/raffle/activity/draw</a>
-     * 入参：{"activityId":100001,"userId":"xiaofuge"}
+     * 入参：{"activityId":100001,"userId":"huangyu"}
      * <p>
      * curl --request POST \
      * --url http://localhost:8091/api/v1/raffle/activity/draw \
      * --header 'content-type: application/json' \
      * --data '{
-     * "userId":"xiaofuge",
+     * "userId":"huangyu",
      * "activityId": 100301
      * }'
      * 限流配置

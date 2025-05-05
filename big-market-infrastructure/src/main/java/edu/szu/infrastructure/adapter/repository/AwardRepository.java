@@ -29,11 +29,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 奖品仓储服务
- * @create 2024-04-06 10:09
- */
+
 @Slf4j
 @Component
 public class AwardRepository implements IAwardRepository {

@@ -16,11 +16,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 积分调整成功消息
- * @create 2024-06-08 19:38
- */
+
 @Slf4j
 @Component
 public class CreditAdjustSuccessCustomer {

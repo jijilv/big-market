@@ -3,11 +3,7 @@ package edu.szu.domain.award.model.valobj;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 账户状态枚举
- * @create 2024-05-24 22:10
- */
+
 @Getter
 @AllArgsConstructor
 public enum AccountStatusVO {

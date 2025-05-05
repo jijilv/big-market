@@ -6,11 +6,7 @@ import edu.szu.domain.activity.model.entity.ActivitySkuEntity;
 import edu.szu.domain.activity.repository.IActivityRepository;
 import edu.szu.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 抽奖活动的支撑类
- * @create 2024-03-23 09:27
- */
+
 public class RaffleActivityAccountQuotaSupport {
 
     protected DefaultActivityChainFactory defaultActivityChainFactory;

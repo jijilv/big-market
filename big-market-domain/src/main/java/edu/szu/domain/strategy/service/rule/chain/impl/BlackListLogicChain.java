@@ -11,11 +11,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 【抽奖前规则】黑名单用户过滤规则
- * @create 2024-01-06 13:19
- */
+
 @Slf4j
 @Component("rule_blacklist")
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

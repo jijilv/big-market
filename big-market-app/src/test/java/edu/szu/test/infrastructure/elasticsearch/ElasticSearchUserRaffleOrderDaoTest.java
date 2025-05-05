@@ -1,8 +1,8 @@
 package edu.szu.test.infrastructure.elasticsearch;
 
 import com.alibaba.fastjson.JSON;
-import edu.szu.infrastructure.dao.po.UserRaffleOrder;
 import edu.szu.infrastructure.elasticsearch.IElasticSearchUserRaffleOrderDao;
+import edu.szu.infrastructure.elasticsearch.po.UserRaffleOrder;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

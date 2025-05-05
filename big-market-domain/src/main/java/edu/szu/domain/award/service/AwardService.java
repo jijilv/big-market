@@ -15,11 +15,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.Map;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 奖品服务
- * @create 2024-04-06 09:39
- */
+
 @Slf4j
 @Service
 public class AwardService implements IAwardService {
